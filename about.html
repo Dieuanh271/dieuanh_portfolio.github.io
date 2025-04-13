@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <style>
+    body {
+      background: url('close_eye.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .about-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 80px 100px;
+    }
+    .about-text {
+      max-width: 40%;
+      margin-left: 370px;
+    }
+    .about-text h1 {
+      font-family: 'Chonburi', serif;
+      font-size: 56px;
+      color: #ffe600;
+      margin-bottom: 20px;
+	  text-align: center;
+    }
+    .about-text p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      color: #ffe600;
+      line-height: 1.8;
+    }
+    .behance-btn {
+      margin-top: 30px;
+      background-color: #436fcf;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 15px;
+      font-family: 'Poppins', sans-serif;
+      border-radius: 30px;
+      display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .behance-btn:hover {
+      background-color: #2c52b3;
+    }
+    .info-card {
+      width: 350px;
+      background-color: white;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      transition: transform 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+    }
+    .info-card:hover {
+      transform: translateY(-5px) scale(1.02);
+    }
+    .info-card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+    .info-card h3 {
+      color: #1f4bb8;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .info-card p {
+      font-size: 14px;
+      color: #333;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <img src="Logo_portfolio.png" alt="Logo" class="logo">
+    <ul class="nav-links">
+      <li><a href="Home1.html">Home</a></li>
+      <li><a href="#" class="active">About Me</a></li>
+      <li><a href="skill.html">Skill</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="about-container">
+    <div class="about-text" data-aos="fade-right">
+      <h1>About Me</h1>
+      <p>
+        Hi, my name is Diệu Anh. I’m currently a student majoring in Management of Enterprise and Technology at the School of Management and Business, Vietnam National University.<br>
+        I have a deep passion for art and aesthetics, and I love drawing, designing, and sculpting dolls. Creativity is an essential part of who I am and how I express myself.
+      </p>
+      <button class="behance-btn" onclick="window.open('https://youtube.com/shorts/6KkbzzKIsNU', '_blank')">
+        🔍 Check out how I look
+      </button>
+    </div>
+
+    <div class="info-card" data-aos="fade-left">
+      <img src="avt.jpg" alt="Profile Picture">
+      <h3>Nguyen Dieu Anh</h3>
+      <p>📍 VietNam</p>
+      <p>📸 iiud.ahn_.ngw</p>
+      <p>✉️ dieuannhnguyen156@gmail.com</p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>

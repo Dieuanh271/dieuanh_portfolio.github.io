@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('contact_bkg-01.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: #faf6f3;
+    }
+
+    .logo {
+      width: 140px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #436fcf;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      padding: 10px 20px;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      background-color: #436fcf;
+      color: #faf6f3;
+    }
+
+    .contact-section {
+      padding: 80px 60px 40px;
+      color: #ffe600;
+      text-align: left;
+    }
+
+    .contact-section h1 {
+      font-family: 'Chonburi', serif;
+      font-size: 60px;
+      margin-bottom: 36px;
+	  margin-left: 100px;
+      padding-left: 5px;
+    }
+
+    form {
+      background-color: #ced0d2;
+      max-width: 600px;
+      padding: 30px;
+      border-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-left: 0;
+    }
+
+    input, textarea {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-style: italic;
+      color: #436fcf;
+      background-color: #fff;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 20px;
+      resize: none;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    button {
+      width: 140px;
+      padding: 15px;
+      border: none;
+      border-radius: 30px;
+      background-color: #436fcf;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      align-self: center;
+    }
+
+    button:hover {
+      background-color: #335dc4;
+    }
+
+    .contact-info {
+      font-size: 12px;
+      margin-top: 36px;
+      color: #ffe600;
+      text-align: left;
+      padding-left: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      form {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <img src="Logo_portfolio.png" alt="Logo" class="logo" />
+    <ul class="nav-links">
+      <li><a href="Home1.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="skill.html">Skill</a></li>
+      <li><a href="#" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <h1 data-aos="fade-down">Contact Me</h1>
+    <form onsubmit="handleSubmit(event)" data-aos="zoom-in">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+
+    <div class="contact-info" data-aos="fade-up">
+      Email: dieuanhnguyen271@gmail.com | Phone number: 03274942004
+    </div>
+  </section>
+
+  <!-- AOS SCRIPT -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("Thank you! Your message has been sent.");
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
